@@ -10,10 +10,10 @@
 <body>
 
     <!-- Header et Barre de navigation -->
-    <header class="flex justify-between px-12 py-4 items-center border-b-2">
+    <header class="flex justify-between md:px-12 px-4 py-4 items-center border-b-2">
         <!-- <h1 class="font-bold text-2xl">Logo</h1> -->
         <img src="./src/img/fortune-logo.png" class="w-14 h-14" alt="">
-        <nav>
+        <nav class="hidden md:block">
             <ul class="flex justify-between gap-6">
                 <li>
                     <a href="#">Home</a>
@@ -38,29 +38,30 @@
                 </li>
             </ul>
         </nav>
+        <i data-lucide="menu" class="block md:hidden cursor-pointer"></i>
     </header>
 
     <!-- Contenu de la page -->
     <main>
-        <!-- Banner -->
-        <div class="w-full h-[80vh] flex items-center justify-between px-12">
+        <!-- Bannière -->
+        <div class="w-full h-[80vh] flex items-center justify-between md:px-12 px-4">
             <div class="flex flex-col gap-6">
                 <p class="text-sm font-bold">Empowerment</p>
                 <h1 class="text-3xl font-bold">Unlock Your Potential</h1>
                 <p>Discover a world of opportunities for personal and professional growth.</p>
-                <div>
-                    <a href="" class="bg-[#E0BD02] text-white px-6 py-3">Explore</a>
-                    <a href="" class="border border-[#E0BD02] px-6 py-3">Learn More</a>
+                <div class="flex flex-wrap gap-2">
+                    <a href="" class="bg-[#E0BD02] text-white md:px-6 md:py-3 px-3 py-1">Explore</a>
+                    <a href="" class="border border-[#E0BD02] md:px-6 md:py-3 px-3 py-1">Learn More</a>
                 </div>
             </div>
-            <div class="w-1/2">
+            <div class="w-1/2 hidden md:block">
                 <img src="./src/img/happy-black-man2.jpg" class="w-full h-full" alt="">
             </div>
         </div>
 
         <!-- Présentation 1 -->
-        <div class="w-full h-screen flex items-center justify-center">
-            <div class="w-1/2">
+        <div class="w-full md:h-screen flex items-center justify-center">
+            <div class="md:w-1/2 px-8 md:px-0">
                 <p class="text-sm font-bold text-center my-6">Discover</p>
                 <h1 class="text-3xl font-bold text-center my-6">Choose, Learn, and Grow with Our Training Programs</h1>
                 <p class="text-center my-6">
@@ -71,8 +72,8 @@
         </div>
 
         <!-- Liste des activités -->
-        <div class="w-full h-[80vh] px-12">
-            <div class="flex items-center gap-10">
+        <div class="w-full md:h-[80vh] md:px-12 px-4">
+            <div class="flex md:flex-row flex-col items-center gap-10">
                 <div>
                     <i data-lucide="box" class="m-auto w-10 h-10"></i>
                     <h2 class="text-2xl font-bold text-center my-6">Select Your Program</h2>
@@ -98,9 +99,9 @@
                     </p>
                 </div>
             </div>
-            <div class="flex items-center justify-center my-6">
-                <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">Join</a>
-                <a href="" class="px-6 py-3 flex">
+            <div class="flex items-center justify-center flex-wrap my-6">
+                <a href="" class="my-2 border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white md:px-6 md:py-3 px-3 py-1">Join</a>
+                <a href="" class="my-2 md:px-6 md:py-3 px-3 py-1 flex">
                     <span>Learn More</span>
                     <i data-lucide="chevron-right" class="text-yellow-500"></i>
                 </a>
@@ -108,13 +109,13 @@
         </div>
 
         <!-- Liste des articles avec auteur -->
-        <div class="px-12 mb-16">
+        <div class="md:px-12 px-4 mb-16">
             <p class="text-sm font-bold my-6">Articles</p>
             <h1 class="text-3xl font-bold my-6">Browse Our Course Catalog</h1>
             <p class="my-6">
                 Discover a wide range of courses to enhance your skills    
             </p>
-            <div class="flex justify-around items-center gap-10">
+            <div class="flex md:flex-row flex-col justify-around items-center gap-10">
                 <div class="border">
                     <img src="./src/img/friends-bg.jpg" class="h-[300px] w-full" alt="">
                     <p class="text-sm font-bold my-6 px-4">All</p>
@@ -173,15 +174,15 @@
         </div>
 
         <!-- Dernier article -->
-        <div class="px-12 mb-16">
+        <div class="md:px-12 px-4 mb-16">
             <p class="text-sm font-bold my-6">Latest</p>
             <h1 class="text-3xl font-bold my-6">Unlock Your Potential Today</h1>
             <p class="my-6">
                 Discover our futur courses and start learning now  
             </p>
-            <div class="flex gap-5">
-                <img src="./src/img/friends-bg.jpg" class="w-1/2 h-[500px]" alt="">
-                <div class="w-1/2 flex justify-center flex-col">
+            <div class="flex md:flex-row flex-col gap-5">
+                <img src="./src/img/friends-bg.jpg" class="md:w-1/2 h-[500px]" alt="">
+                <div class="md:w-1/2 flex justify-center flex-col">
                     <div class="flex items-center gap-x-5">
                         <div class="bg-slate-300 px-4 py-1 text-sm">Business</div>
                         <div class="text-sm">5 minutes read</div>
@@ -197,15 +198,15 @@
         </div>
 
         <!-- Liste des articles avec catégories -->
-        <div class="px-12 my-16">
-            <div class="flex mt-12">
-                <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">View All</a>
-                <a href="" class="px-6 py-3">Marketing</a>
-                <a href="" class="px-6 py-3">Finance</a>
-                <a href="" class="px-6 py-3">Leadership</a>
-                <a href="" class="px-6 py-3">Entrepreneurship</a>
+        <div class="md:px-12 px-4 my-16">
+            <div class="flex flex-wrap mt-12">
+                <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white md:px-6 md:py-3 px-3 py-1 my-2">View All</a>
+                <a href="" class="my-2 md:px-6 md:py-3 px-3 py-1">Marketing</a>
+                <a href="" class="my-2 md:px-6 md:py-3 px-3 py-1">Finance</a>
+                <a href="" class="my-2 md:px-6 md:py-3 px-3 py-1 hidden md:block">Leadership</a>
+                <a href="" class="my-2 md:px-6 md:py-3 px-3 py-1 hidden md:block">Entrepreneurship</a>
             </div>
-            <div class="grid grid-cols-3 gap-10 my-10">
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-10 my-10">
                 <div class="">
                     <img src="./src/img/friends-bg.jpg" class="h-[300px] w-full" alt="">
                     <div class="my-4 flex items-center gap-x-5">
@@ -300,7 +301,7 @@
         </div>
 
         <!-- Contenu d'un article -->
-        <div class="px-12 my-24 w-2/3 m-auto">
+        <div class="md:px-12 px-4 my-24 md:w-2/3 m-auto">
 
             <!-- Détail de la publication -->
             <h1 class="text-3xl font-bold my-6">Introduction</h1>
@@ -339,7 +340,7 @@
             <!-- Partage de publication -->
             <div class="border-b border-black pb-8">
                 <h2 class="font-bold my-6">Share this post</h2>
-                <div class="flex justify-between">
+                <div class="flex justify-between flex-col md:flex-row md:gap-0 gap-6">
                     <ul class="flex gap-2">
                         <li>
                             <a href="#">
@@ -362,7 +363,7 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="flex gap-2">
+                    <ul class="flex gap-2 flex-wrap">
                         <li>
                             <a href="#" class="bg-slate-300 font-bold px-4 py-1 text-sm">
                                 Tag one
@@ -401,22 +402,22 @@
         </div>
 
         <!-- Liste d'évènements -->
-        <div class="px-12 mb-16">
+        <div class="md:px-12 px-4 mb-16">
             <p class="text-sm font-bold my-6">Discover</p>
             <h1 class="text-3xl font-bold my-6">Upcoming</h1>
             <p class="my-6">
                 Explore our schedule of upcoming training events, webinars, and live sessions.
             </p>
             <div class="flex mt-12">
-                <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">Week 1</a>
-                <a href="" class="px-6 py-3">Week 2</a>
-                <a href="" class="px-6 py-3">Week 3</a>
+                <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white my-2 md:px-6 md:py-3 px-3 py-1">Week 1</a>
+                <a href="" class="my-2 md:px-6 md:py-3 px-3 py-1">Week 2</a>
+                <a href="" class="my-2 md:px-6 md:py-3 px-3 py-1">Week 3</a>
             </div>
             
             <!-- Détail de chaque évènement -->
-            <div class="flex border p-4 justify-center gap-24 mt-10">
-                <h2 class="font-bold text-lg w-[20%]">Friday 09 Feb</h2>
-                <div class="flex">
+            <div class="flex flex-col md:flex-row border p-4 justify-center md:gap-24 gap-10 mt-10">
+                <h2 class="font-bold text-lg md:w-[20%]">Friday 09 Feb</h2>
+                <div class="flex flex-col md:flex-row">
                     <div class="">
                         <h2 class="font-bold text-lg pb-3">Event title heading</h2>
                         <h3 class="font-bold py-2">Time</h3>
@@ -427,7 +428,7 @@
                         <p class="py-2 text-sm">Johny Dona</p>
                         <h3 class="font-bold py-2">Detail</h3>
                         <p class="py-2 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa consectetur ratione quidem nesciunt culpa nostrum accusamus doloribus aliquid enim accusantium.</p>
-                        <div class="mt-4">
+                        <div class="mt-4 md:mb-0 mb-8">
                             <a href="" class="text-sm border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">View Détails</a>
                         </div>
                     </div>
@@ -436,9 +437,9 @@
             </div>
             
             <!-- Détail de chaque évènement -->
-            <div class="flex border p-4 justify-center gap-24 mt-10">
-                <h2 class="font-bold text-lg w-[20%]">Friday 09 Feb</h2>
-                <div class="flex">
+            <div class="flex flex-col md:flex-row border p-4 justify-center md:gap-24 gap-10 mt-10">
+                <h2 class="font-bold text-lg md:w-[20%]">Friday 09 Feb</h2>
+                <div class="flex flex-col md:flex-row">
                     <div class="">
                         <h2 class="font-bold text-lg pb-3">Event title heading</h2>
                         <h3 class="font-bold py-2">Time</h3>
@@ -449,7 +450,7 @@
                         <p class="py-2 text-sm">Johny Dona</p>
                         <h3 class="font-bold py-2">Detail</h3>
                         <p class="py-2 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa consectetur ratione quidem nesciunt culpa nostrum accusamus doloribus aliquid enim accusantium.</p>
-                        <div class="mt-4">
+                        <div class="mt-4 md:mb-0 mb-8">
                             <a href="" class="text-sm border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">View Détails</a>
                         </div>
                     </div>
@@ -458,9 +459,9 @@
             </div>
             
             <!-- Détail de chaque évènement -->
-            <div class="flex border p-4 justify-center gap-24 mt-10">
-                <h2 class="font-bold text-lg w-[20%]">Friday 09 Feb</h2>
-                <div class="flex">
+            <div class="flex flex-col md:flex-row border p-4 justify-center md:gap-24 gap-10 mt-10">
+                <h2 class="font-bold text-lg md:w-[20%]">Friday 09 Feb</h2>
+                <div class="flex flex-col md:flex-row">
                     <div class="">
                         <h2 class="font-bold text-lg pb-3">Event title heading</h2>
                         <h3 class="font-bold py-2">Time</h3>
@@ -471,7 +472,7 @@
                         <p class="py-2 text-sm">Johny Dona</p>
                         <h3 class="font-bold py-2">Detail</h3>
                         <p class="py-2 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa consectetur ratione quidem nesciunt culpa nostrum accusamus doloribus aliquid enim accusantium.</p>
-                        <div class="mt-4">
+                        <div class="mt-4 md:mb-0 mb-8">
                             <a href="" class="text-sm border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">View Détails</a>
                         </div>
                     </div>
@@ -480,6 +481,437 @@
             </div>
             
         </div>
+
+        <!-- L'équipe -->
+
+        <div class="md:px-12 px-4 mb-16">
+            <p class="text-sm font-bold my-6 text-center">Experienced</p>
+            <h1 class="text-3xl font-bold my-6 text-center">Meet Our Team</h1>
+            <p class="my-6 text-center">
+                Get to know the experts behind our training programs. 
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-12">
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-300 w-12 h-12 p-2 rounded-full flex justify-center items-center mb-2">
+                        <i data-lucide="user" class=""></i>
+                    </div>
+                    <h2 class="font-bold text-2xl my-2">John Doe</h2>
+                    <h3 class="text-lg my-2">Head Trainer</h3>
+                    <p class="my-2 text-center">
+                        John Doe is an experienced entrepreneur with a passion for teaching and mentoring.
+                    </p>
+                    <ul class="flex gap-2 my-2">
+                        <li>
+                            <a href="#">
+                                <i data-lucide="linkedin" class="bg-black text-white p-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="twitter" class=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="facebook" class="bg-black text-white p-1 rounded-full"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-300 w-12 h-12 p-2 rounded-full flex justify-center items-center mb-2">
+                        <i data-lucide="user" class=""></i>
+                    </div>
+                    <h2 class="font-bold text-2xl my-2">John Doe</h2>
+                    <h3 class="text-lg my-2">Head Trainer</h3>
+                    <p class="my-2 text-center">
+                        John Doe is an experienced entrepreneur with a passion for teaching and mentoring.
+                    </p>
+                    <ul class="flex gap-2 my-2">
+                        <li>
+                            <a href="#">
+                                <i data-lucide="linkedin" class="bg-black text-white p-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="twitter" class=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="facebook" class="bg-black text-white p-1 rounded-full"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-300 w-12 h-12 p-2 rounded-full flex justify-center items-center mb-2">
+                        <i data-lucide="user" class=""></i>
+                    </div>
+                    <h2 class="font-bold text-2xl my-2">John Doe</h2>
+                    <h3 class="text-lg my-2">Head Trainer</h3>
+                    <p class="my-2 text-center">
+                        John Doe is an experienced entrepreneur with a passion for teaching and mentoring.
+                    </p>
+                    <ul class="flex gap-2 my-2">
+                        <li>
+                            <a href="#">
+                                <i data-lucide="linkedin" class="bg-black text-white p-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="twitter" class=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="facebook" class="bg-black text-white p-1 rounded-full"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-300 w-12 h-12 p-2 rounded-full flex justify-center items-center mb-2">
+                        <i data-lucide="user" class=""></i>
+                    </div>
+                    <h2 class="font-bold text-2xl my-2">John Doe</h2>
+                    <h3 class="text-lg my-2">Head Trainer</h3>
+                    <p class="my-2 text-center">
+                        John Doe is an experienced entrepreneur with a passion for teaching and mentoring.
+                    </p>
+                    <ul class="flex gap-2 my-2">
+                        <li>
+                            <a href="#">
+                                <i data-lucide="linkedin" class="bg-black text-white p-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="twitter" class=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="facebook" class="bg-black text-white p-1 rounded-full"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-300 w-12 h-12 p-2 rounded-full flex justify-center items-center mb-2">
+                        <i data-lucide="user" class=""></i>
+                    </div>
+                    <h2 class="font-bold text-2xl my-2">John Doe</h2>
+                    <h3 class="text-lg my-2">Head Trainer</h3>
+                    <p class="my-2 text-center">
+                        John Doe is an experienced entrepreneur with a passion for teaching and mentoring.
+                    </p>
+                    <ul class="flex gap-2 my-2">
+                        <li>
+                            <a href="#">
+                                <i data-lucide="linkedin" class="bg-black text-white p-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="twitter" class=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="facebook" class="bg-black text-white p-1 rounded-full"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-slate-300 w-12 h-12 p-2 rounded-full flex justify-center items-center mb-2">
+                        <i data-lucide="user" class=""></i>
+                    </div>
+                    <h2 class="font-bold text-2xl my-2">John Doe</h2>
+                    <h3 class="text-lg my-2">Head Trainer</h3>
+                    <p class="my-2 text-center">
+                        John Doe is an experienced entrepreneur with a passion for teaching and mentoring.
+                    </p>
+                    <ul class="flex gap-2 my-2">
+                        <li>
+                            <a href="#">
+                                <i data-lucide="linkedin" class="bg-black text-white p-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="twitter" class=""></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i data-lucide="facebook" class="bg-black text-white p-1 rounded-full"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Liens Rapides -->
+
+        <div class="flex justify-center items-center md:h-screen my-12 md:my-0">
+            <div>
+                <h1 class="text-3xl font-bold my-6 text-center">We're hiring !</h1>
+                <p class="my-6 text-center">
+                    Get to know the experts behind our training programs. 
+                </p>
+                <div class="flex justify-center items-center">
+                    <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">Open positions</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:px-12 px-4 md:h-[80vh]">
+            <div class="">
+                <h1 class="text-3xl font-bold mb-6">FAQs</h1>
+                <p class="my-6">Find answers to common questions about our training programs, certifications, and learning paths.</p>
+                <div class="my-8">
+                    <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">Contact</a>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between border border-black p-4 mb-4">
+                    <p>How do I enroll?</p>
+                    <i data-lucide="plus" class="cursor-pointer"></i>
+                </div>
+                <div class="flex justify-between border border-black p-4 mb-4">
+                    <p>How do I enroll?</p>
+                    <i data-lucide="plus" class="cursor-pointer"></i>
+                </div>
+                <div class="flex justify-between border border-black p-4 mb-4">
+                    <p>How do I enroll?</p>
+                    <i data-lucide="plus" class="cursor-pointer"></i>
+                </div>
+                <div class="flex justify-between border border-black p-4 mb-4">
+                    <p>How do I enroll?</p>
+                    <i data-lucide="plus" class="cursor-pointer"></i>
+                </div>
+                <div class="flex justify-between border border-black p-4 mb-4">
+                    <p>How do I enroll?</p>
+                    <i data-lucide="plus" class="cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="px-4 md:px-12">
+            <p class="text-sm font-bold my-6">Get Started</p>
+            <h1 class="text-3xl font-bold my-6">Contact Fortune</h1>
+            <p class="my-6">
+                Have a question ? Need personalized training ? Contact us. 
+            </p>
+            <form action="" method="post" class="md:w-[60%]">
+                <div class="flex md:flex-row flex-col gap-4 my-4">
+                    <div class="flex flex-col w-full">
+                        <label for="first_name" class="my-2 font-semibold">First name</label>
+                        <input type="text" name="first_name" id="first_name" class="border rounded-sm h-10 focus:border-black focus:outline-none px-2">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label for="last_name" class="my-2 font-semibold">Last name</label>
+                        <input type="text" name="last_name" id="last_name" class="border rounded-sm h-10 focus:border-black focus:outline-none px-2">
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col gap-4 my-4">
+                    <div class="flex flex-col w-full">
+                        <label for="email" class="my-2 font-semibold">Email</label>
+                        <input type="email" name="email" id="email" class="border rounded-sm h-10 focus:border-black focus:outline-none px-2">
+                    </div>
+                    <div class="flex flex-col w-full">
+                        <label for="first_name" class="my-2 font-semibold">Phone Number</label>
+                        <input type="text" name="first_name" id="first_name" class="border rounded-sm h-10 focus:border-black focus:outline-none px-2">
+                    </div>
+                </div>
+                <div class="flex flex-col my-4">
+                    <label for="topic" class="my-2 font-semibold">Choose a Topic</label>
+                    <select name="topic" id="topic" class="border rounded-sm h-10 focus:border-black focus:outline-none px-2">
+                        <option value="0">Select One...</option>
+                        <option value="1">Dev...</option>
+                        <option value="2">Marketing...</option>
+                    </select>
+                </div>
+                <div class="flex flex-col my-4">
+                    <p class="my-2 font-semibold">Which Best Describes You?</p>
+                    <div class="grid grid-cols-2 gap-4 my-2">
+                        <label for="description"><input type="checkbox" name="description" id="description"> Training Courses </label>
+                        <label for="description"><input type="checkbox" name="description" id="description"> Training Courses </label>
+                        <label for="description"><input type="checkbox" name="description" id="description"> Training Courses </label>
+                        <label for="description"><input type="checkbox" name="description" id="description"> Training Courses </label>
+                        <label for="description"><input type="checkbox" name="description" id="description"> Training Courses </label>
+                        <label for="description"><input type="checkbox" name="description" id="description"> Training Courses </label>
+                    </div>
+                </div>
+                <div class="flex flex-col my-4">
+                    <label for="message" class="my-2 font-semibold">Message</label>
+                    <textarea name="message" id="message" placeholder="Write your message" class="border rounded-sm h-28 focus:border-black focus:outline-none p-2"></textarea>
+                </div>
+                <div class="flex flex-col my-4">
+                    <label for="accept"><input type="checkbox" name="accept" id="accept"> I accept the Terms. </label>
+                </div>
+
+                <div class="my-6">
+                    <a href="" class="border border-[#E0BD02] hover:bg-[#E0BD02] hover:text-white px-6 py-3">Submit</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Présentation et Bouton d'inscription & Connexion -->
+        <div class="my-12 md:my-0 w-full md:h-screen flex md:flex-row flex-col items-center justify-between px-4 md:px-12">
+            <div class="flex flex-col gap-6">
+                <h1 class="text-3xl font-bold">Unlock Your Potential with Us</h1>
+                <p>Discover our wide range of courses and start learning today.</p>
+            </div>
+            <div class="flex gap-2 my-2">
+                <a href="" class="bg-[#E0BD02] text-white px-6 py-3">Sign Up</a>
+                <a href="" class="border border-[#E0BD02] px-6 py-3">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="w-full md:h-screen flex items-center justify-between px-4 md:px-12">
+            <div class="flex flex-col gap-6">
+                <h1 class="text-3xl font-bold">Stay Informed with our Newsletter</h1>
+                <p>Subscribe to our Newsletter to receive updates on new courses, training materials, and educational events.</p>
+                <div class="flex md:flex-row flex-col w-full">
+                    <input type="email" name="email" id="email" placeholder="Your adress Email" class="md:w-1/2 md:mb-0 mb-2 border rounded-sm h-12 focus:border-black focus:outline-none px-2">
+                    <button class="bg-[#E0BD02] text-white px-6 py-3">Subscribe now</button>
+                </div>
+                <p>By subscribing, you agree to our Terms and Conditions.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="px-4 md:px-12 py-12 md:py-4">
+
+            <!-- Contacter rapidement -->
+            <div class="flex md:flex-row flex-col justify-between w-full my-4">
+                <div class="">
+                    <h2 class="font-bold my-2">Stay Informed, Subscribe</h2>
+                    <p class="my-2">Get the latest updates and exclusive offers.</p>
+                </div>
+               <div class="flex flex-col">
+                    <div class="flex gap-2 md:flex-row flex-col">
+                        <input type="email" name="email" id="email" placeholder="Your adress Email" class="border rounded-sm h-12 focus:border-black focus:outline-none px-2">
+                        <button class="bg-[#E0BD02] text-white px-6 py-3 w-full">Join</button>
+                    </div>
+                    <p class="my-4">By subscribing, you agree to our Privacy Policy.</p>
+               </div>
+            </div>
+
+            <!-- Liste de liens -->
+            <div class="grid grid-cols-1 gap-12 md:gap-0 md:grid-cols-6 border-b border-black mt-12 my-4 pb-12">
+                <img src="./src/img/fortune-logo.png" class="w-14 h-14" alt="">
+
+                <!-- Column -->
+                <div>
+                    <h2 class="font-semibold">Column One</h2>
+                    <ul>
+                        <li class="my-3"><a href="#">About Us</a></li>
+                        <li class="my-3"><a href="#">Contact Us</a></li>
+                        <li class="my-3"><a href="#">FAQs</a></li>
+                        <li class="my-3"><a href="#">Support</a></li>
+                        <li class="my-3"><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column -->
+                <div>
+                    <h2 class="font-semibold">Column One</h2>
+                    <ul>
+                        <li class="my-3"><a href="#">About Us</a></li>
+                        <li class="my-3"><a href="#">Contact Us</a></li>
+                        <li class="my-3"><a href="#">FAQs</a></li>
+                        <li class="my-3"><a href="#">Support</a></li>
+                        <li class="my-3"><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column -->
+                <div>
+                    <h2 class="font-semibold">Column One</h2>
+                    <ul>
+                        <li class="my-3"><a href="#">About Us</a></li>
+                        <li class="my-3"><a href="#">Contact Us</a></li>
+                        <li class="my-3"><a href="#">FAQs</a></li>
+                        <li class="my-3"><a href="#">Support</a></li>
+                        <li class="my-3"><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column -->
+                <div>
+                    <h2 class="font-semibold">Column One</h2>
+                    <ul>
+                        <li class="my-3"><a href="#">About Us</a></li>
+                        <li class="my-3"><a href="#">Contact Us</a></li>
+                        <li class="my-3"><a href="#">FAQs</a></li>
+                        <li class="my-3"><a href="#">Support</a></li>
+                        <li class="my-3"><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column -->
+                <div>
+                    <h2 class="font-semibold">Column One</h2>
+                    <ul>
+                        <li class="my-3"><a href="#">About Us</a></li>
+                        <li class="my-3"><a href="#">Contact Us</a></li>
+                        <li class="my-3"><a href="#">FAQs</a></li>
+                        <li class="my-3"><a href="#">Support</a></li>
+                        <li class="my-3"><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+
+           <div class="flex flex-col-reverse md:flex-row justify-between items-center mb-12 gap-4">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <p>© 2024 Fortune. All rights reserved.</p>
+                    <ul class="flex flex-col md:flex-row gap-4">
+                        <li><a href="" class="underline">Privacy Policy</a></li>
+                        <li><a href="" class="underline">Terms of Service</a></li>
+                        <li><a href="" class="underline">Cookies Policy</a></li>
+                    </ul>
+                </div>
+
+                <ul class="flex gap-8 my-2">
+                    <li>
+                        <a href="#">
+                            <i data-lucide="linkedin" class="bg-black text-white p-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="twitter" class=""></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="facebook" class="bg-black text-white p-1 rounded-full"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="youtube" class="bg-black rounded-lg text-white p-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="instagram" class=""></i>
+                        </a>
+                    </li>
+                </ul>
+           </div>
+        </div>
+        
     </main>
     
     
